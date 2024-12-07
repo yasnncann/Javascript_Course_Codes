@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yasincan Atıcı</title>
+    <script>
+        window.onload = yapilandir;
+        function yapilandir() {
+            document.getElementById('buton1').onmouseover = function () {
+                alert("fonksiyon çalıştı");
+            }
+            document.getElementById('buton2').addEventListener("click", fonksiyon2);
+        }
+        function fonksiyon2() {
+            alert("Fonksiyon2 Çalıştı");
+        }
+        function fonksiyon3() {
+            alert("Fonksiyon3 çalıştı");
+        }
+        document.addEventListener("mouseout", sayfadanAyrildi);
+        function sayfadanAyrildi() {
+            alert("mouse sayfadan ayrıldı");
+        }
+    </script>
+</head>
+
+<body>
+    <input type="button" id="buton1" value="Fonksiyon1 Çakultur">
+    <input type="button" id="buton2" value="Fonksiyon2 Çakultur">
+    <input type="button" onclick="fonksiyon3()" value="Fonksiyon3 Çakultur">
+
+</body>
+
+</html>

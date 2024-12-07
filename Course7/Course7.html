@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yasincan Atıcı</title>
+    <script>
+        function satirClassIcerigiDegistir() {
+            var satirlar = document.getElementsByClassName("satir");
+            satirlar[0].innerHTML = "<b>" + satirlar[0].innerHTML + "</b>";
+            satirlar[1].innerHTML = "<u>" + satirlar[1].innerHTML + "</u>";
+        }
+    </script>
+</head>
+
+<body>
+    <div id="kutu">
+        Test İçeriği...
+        <h1>DOM</h1>
+        <p id="baslik">Şablonun Başlığı</p>
+        <p class="satir">Bu Satır Bir Şablondur</p>
+        <p class="satir">Buda ikinci Satır Şablonudur</p>
+    </div>
+    <input type="button" onclick="satirClassIcerigiDegistir()" value="Yazıları Değiştir">
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<head>
+    <title>
+        Yasincan Atıcı
+    </title>
+    <script>
+        function topla(sayi1, sayi2) {
+            var toplam = sayi1 + sayi2;
+            document.write(sayi1 + " ile " + sayi2 + " toplamı = " + toplam);
+        }
+        topla(2, 5);
+        function zamaniBaslat() {
+            var zaman = new Date();
+            var saat = zaman.getHours();
+            var dakika = zaman.getMinutes();
+            var saniye = zaman.getSeconds();
+            saat = ciftSayiKontrol(saat);
+            dakika = ciftSayiKontrol(dakika);
+            saniye = ciftSayiKontrol(saniye);
+            document.getElementById('dijitalsaat').innerHTML = saat + "." + dakika + "." + saniye;
+            setTimeout('zamaniBaslat', 1000);
+        }
+        function ciftSayiKontrol(deger) {
+            if (deger < 10) {
+                deger = "0" + deger;
+            }
+            return deger;
+        }
+        window.onload = zamaniBaslat;
+    </script>
+</head>
+
+<body>
+    <div id="dijitalsaat">
+
+    </div>
+</body>
+
+</html>
